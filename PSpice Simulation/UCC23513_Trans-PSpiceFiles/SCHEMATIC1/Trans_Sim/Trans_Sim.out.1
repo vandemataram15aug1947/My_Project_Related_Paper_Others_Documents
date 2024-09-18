@@ -1,0 +1,122 @@
+
+**** 08/27/24 19:37:01 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Trans_Sim"  [ D:\NIT Calicut\My NITC M.Tech Project\GitHub_Uploaded_Project\PSpice Simulation\UCC23513_Trans
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Trans_Sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 50us 0 1u 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source UCC23513_TRANS
+.EXTERNAL OUTPUT VCC
+.EXTERNAL OUTPUT VEE
+X_U1         N00097 VEE VEE VCC VEE N00789 UCC23513_TRANS
+R_R1         N00261 N00097  150 TC=0,0 
+V_V1         VCC VEE 15Vdc
+V_V2         N00261 VEE  
++PULSE 0 5 0 1n 1n 5u 10u
+R_R2         N00789 N00953  150 TC=0,0 
+C_C2         VEE VCC  100n  TC=0,0 
+C_C3         VEE VCC  4.7u  TC=0,0 
+C_C5         VEE VEE  4.7u  TC=0,0 
+C_C4         VEE VEE  100n  TC=0,0 
+C_C6         VEE VCC  100n  TC=0,0 
+D_D2         N00953 N00789 NSR20F30NXT5G 
+R_R3         VEE N00953  10k TC=0,0 
+
+**** RESUMING Trans_Sim.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N00261 is floating
+
+ERROR(ORPSIM-15142): Node N00097 is floating
+
+ERROR(ORPSIM-15142): Node VCC is floating
+
+ERROR(ORPSIM-15142): Node VEE is floating
+
+ERROR(ORPSIM-15142): Node N00789 is floating
+
+ERROR(ORPSIM-15142): Node N00953 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16136934 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N161349470 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16136828 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16136816 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16137286 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16136832 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16137604 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16137680 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16137278 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16135089 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16136770 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16135075 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16134563 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16134705 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16134987 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16137660 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16134789 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16137652 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N161349250 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16135095 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.U50_N16095168 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.U50_N16087080 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16137752 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16158002 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.N16134511 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.X_D2.3 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.U50_N16113382 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.U50_N16117775 is floating
+

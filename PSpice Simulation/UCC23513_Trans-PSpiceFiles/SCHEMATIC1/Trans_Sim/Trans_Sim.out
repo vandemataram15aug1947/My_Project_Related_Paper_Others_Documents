@@ -1,0 +1,296 @@
+
+**** 09/17/24 16:32:14 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Trans_Sim"  [ D:\NIT Calicut\My NITC M.Tech Project\GitHub_Uploaded_Project\Without_GitHub\PSpice Simulation
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Trans_Sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 50us 0 1u 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source UCC23513_TRANS
+X_U1         N00097 0 0 N00419 0 N00789 UCC23513_TRANS
+R_R1         N00261 N00097  150 TC=0,0 
+V_V1         N00419 0 15Vdc
+V_V2         N00261 0  
++PULSE 0 5 0 1n 1n 5u 10u
+R_R2         N00789 N00953  150 TC=0,0 
+C_C2         0 N00419  100n  TC=0,0 
+C_C3         0 N00419  4.7u  TC=0,0 
+C_C5         0 0  4.7u  TC=0,0 
+C_C4         0 0  100n  TC=0,0 
+C_C6         0 N00419  100n  TC=0,0 
+D_D2         N00953 N00789 NSR20F30NXT5G 
+R_R3         0 N00953  10k TC=0,0 
+
+**** RESUMING Trans_Sim.cir ****
+.END
+
+**** 09/17/24 16:32:14 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Trans_Sim"  [ D:\NIT Calicut\My NITC M.Tech Project\GitHub_Uploaded_Project\Without_GitHub\PSpice Simulation
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_D1            D_D2            D_D99           
+          IS    1.000000E-15    1.000000E-15    1.000000E-15 
+           N     .79             .8             1.000000E-03 
+          RS     .22            1.36621         5.000000E-03 
+          TT   10.000000E-12   10.000000E-12   10.000000E-12 
+
+
+               X_U1.X_D8.1n4148 
+          IS    4.352000E-09 
+           N    1.906        
+          BV  110            
+         IBV  100.000000E-06 
+          RS     .6458       
+          TT    3.480000E-09 
+         CJO  704.800000E-15 
+          VJ     .869        
+           M     .03         
+
+
+               X_U1.X_D5.1n4148 
+          IS    4.352000E-09 
+           N    1.906        
+          BV  110            
+         IBV  100.000000E-06 
+          RS     .6458       
+          TT    3.480000E-09 
+         CJO  704.800000E-15 
+          VJ     .869        
+           M     .03         
+
+
+               X_U1.X_D6.1n4148 
+          IS    4.352000E-09 
+           N    1.906        
+          BV  110            
+         IBV  100.000000E-06 
+          RS     .6458       
+          TT    3.480000E-09 
+         CJO  704.800000E-15 
+          VJ     .869        
+           M     .03         
+
+
+               X_U1.X_D1.1n4148 
+          IS    4.352000E-09 
+           N    1.906        
+          BV  110            
+         IBV  100.000000E-06 
+          RS     .6458       
+          TT    3.480000E-09 
+         CJO  704.800000E-15 
+          VJ     .869        
+           M     .03         
+
+
+               X_U1.X_D4.1n4148                X_U1.X_D2.df    X_U1.X_D2.dr    
+          IS    4.352000E-09                   27.500000E-12    5.490000E-15 
+           N    1.906                           1.1             1.77         
+          BV  110                                                            
+         IBV  100.000000E-06                                                 
+          RS     .6458                           .62             .804        
+          TT    3.480000E-09                   50.100000E-09                 
+         CJO  704.800000E-15                   78.300000E-12                 
+          VJ     .869                                                        
+           M     .03                             .33                         
+
+
+               X_U1.X_D7.1n4148 
+          IS    4.352000E-09 
+           N    1.906        
+          BV  110            
+         IBV  100.000000E-06 
+          RS     .6458       
+          TT    3.480000E-09 
+         CJO  704.800000E-15 
+          VJ     .869        
+           M     .03         
+
+
+**** 09/17/24 16:32:14 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Trans_Sim"  [ D:\NIT Calicut\My NITC M.Tech Project\GitHub_Uploaded_Project\Without_GitHub\PSpice Simulation
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_S10._S10 X_U1.X_S9._S9   X_U1.X_S6._S6   X_U1.X_S8._S8   
+         RON    1                .2             1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         VON     .8              .75             .8              .75         
+        VOFF     .4              .25             .4              .25         
+
+
+               X_U1.X_S7._S7   X_U1.X_U50_S4._U50_S4 
+         RON    1               6            
+        ROFF   10.000000E+06    3.3          
+         VON     .8              .75         
+        VOFF     .4              .25         
+
+
+               X_U1.X_U50_S3._U50_S3 
+         RON    1.000000E-03 
+        ROFF   10.000000E+06 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U1.X_U50_S1._U50_S1 
+         RON    1.000000E-03 
+        ROFF   10.000000E+06 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U1.X_U50_S2._U50_S2 
+         RON   10            
+        ROFF    1            
+         VON     .75         
+        VOFF     .25         
+
+
+**** 09/17/24 16:32:14 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Trans_Sim"  [ D:\NIT Calicut\My NITC M.Tech Project\GitHub_Uploaded_Project\Without_GitHub\PSpice Simulation
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00097)-2.034E-09 (N00261)    0.0000 (N00419)   15.0000 (N00789)    -.0050     
+
+(N00953)    -.0049 (X_U1.X_D2.3)  -13.7000                                      
+
+(X_U1.N16134511)-153.5E-06            (X_U1.N16134563)-2.132E-18                
+
+(X_U1.N16134705)-2.111E-18            (X_U1.N16134789)    0.0000                
+
+(X_U1.N16134987)   14.4280            (X_U1.N16135075)-639.6E-21                
+
+(X_U1.N16135089)   12.4090            (X_U1.N16135095)   12.0000                
+
+(X_U1.N16136770)    6.0000            (X_U1.N16136816)    0.0000                
+
+(X_U1.N16136822)    1.0000            (X_U1.N16136828)     .0495                
+
+(X_U1.N16136832)   15.0000            (X_U1.N16136882)    0.0000                
+
+(X_U1.N16136928)    0.0000            (X_U1.N16136934)    5.0000                
+
+(X_U1.N16137278)   11.0000            (X_U1.N16137286)   11.0000                
+
+(X_U1.N16137604)   15.0000            (X_U1.N16137652)   14.8660                
+
+(X_U1.N16137660)   11.0020            (X_U1.N16137680)   11.0010                
+
+(X_U1.N16137712)    1.0000            (X_U1.N16137716)    0.0000                
+
+(X_U1.N16137752)   12.0000            (X_U1.N16137806)    0.0000                
+
+(X_U1.N16137812)    1.0000            (X_U1.N16158002)   14.7140                
+
+(X_U1.N161349250)-1.356E-09           (X_U1.N161349470)-678.1E-12               
+
+(X_U1.X_U633.Yint)    1.0000          (X_U1.X_U634.YINT)    0.0000              
+
+(X_U1.X_U635.Yint)    1.0000          (X_U1.X_U636.YINT)    0.0000              
+
+(X_U1.X_U637.Yint)    1.0000          (X_U1.X_U638.YINT)    0.0000              
+
+(X_U1.U50_N16085851)-2.111E-18        (X_U1.U50_N16087080) 19.99E-06            
+
+(X_U1.U50_N16095168)    -.0274        (X_U1.U50_N16096593)    1.0000            
+
+(X_U1.U50_N16113382) 24.94E-06        (X_U1.U50_N16113524)    0.0000            
+
+(X_U1.U50_N16117775) 19.99E-06        (X_U1.U50_N16119515)    1.0000            
+
+(X_U1.U50_N16119578)    1.0000        (X_U1.U50_N16124434)    0.0000            
+
+(X_U1.U50_N16124515)    0.0000        (X_U1.U50_IN_DELAYED)-2.111E-18       
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.820E-03
+    V_V2        -1.356E-11
+    X_U1.V_V6   -4.951E-07
+    X_U1.V_V3    9.980E-08
+    X_U1.V_V5   -1.487E-06
+    X_U1.V_V7    0.000E+00
+    X_U1.V_V2    1.728E-05
+    X_U1.V_V4   -9.980E-08
+    X_U1.X_H1.VH_H1  -2.132E-21
+    X_U1.X_D2.vz  -1.371E-11
+
+    TOTAL POWER DISSIPATION   2.71E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/17/24 16:32:14 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Trans_Sim"  [ D:\NIT Calicut\My NITC M.Tech Project\GitHub_Uploaded_Project\Without_GitHub\PSpice Simulation
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.39
+
